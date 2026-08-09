@@ -28,7 +28,7 @@ export default function AboutSection() {
                   <Award size={16} className="text-[#A8C9A5]" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold text-[#6B5E5E]">CRP Ativo</p>
+                  <p className="text-xs font-semibold text-[#6B5E5E]">CRP 11/19565</p>
                   <p className="text-[10px] text-[#6B5E5E]/60">Especialista TCC</p>
                 </div>
               </div>

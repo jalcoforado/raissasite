@@ -74,7 +74,7 @@ export default function ContactSection() {
             />
             <p className="font-script text-2xl text-[#D4919A] mb-1">Raíssa Alcoforado</p>
             <p className="text-sm text-[#6B5E5E]/70 mb-6">
-              Psicóloga Infantojuvenil · CRP XX/XXXXX
+              Psicóloga Infantojuvenil · CRP 11/19565
             </p>
             <Button
               asChild

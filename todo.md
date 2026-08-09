@@ -11,3 +11,5 @@
 - [x] Quick questions for common inquiries
 - [x] WhatsApp redirect for scheduling appointments
 - [x] Vitest tests for chat endpoint
+- [x] Add CRP 11/19565 to the site
+- [x] Update chatbot to inform pricing: avulsa R$250, pacote 4 sessões R$200/cada

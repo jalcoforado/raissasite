@@ -20,7 +20,7 @@ const benefits = [
 
 export default function ApproachSection() {
   return (
-    <section id="abordagem" className="py-20 bg-white">
+    <section id="abordagem" className="py-20 bg-[#FDF8F4]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">

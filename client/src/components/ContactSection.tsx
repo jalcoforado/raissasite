@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {
   return (
-    <section id="contato" className="py-20 bg-white">
+    <section id="contato" className="py-20 bg-[#FDF8F4]">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="font-script text-2xl text-[#5B8DB8] mb-2">Contato</p>

@@ -5,7 +5,7 @@ import { Award, BookOpen, Users } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="py-20 bg-white">
+    <section id="sobre" className="py-20 bg-[#FDF8F4]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image */}

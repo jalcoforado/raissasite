@@ -5,7 +5,7 @@ import { Award, BookOpen, Users } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="sobre" className="py-20 bg-white">
+    <section id="sobre" className="py-20 bg-[#F5EDE7]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image */}
@@ -21,7 +21,7 @@ export default function AboutSection() {
 
           {/* Right: Text */}
           <div className="space-y-6">
-            <p className="font-script text-2xl text-[#5B8DB8]">Sobre mim</p>
+            <p className="font-script text-2xl text-[#8EA0AD]">Sobre mim</p>
             <h2 className="font-serif-display text-3xl md:text-4xl font-bold text-slate-800 leading-tight">
               Cuidar de crianças e adolescentes é cuidar do futuro
             </h2>
@@ -41,7 +41,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="flex items-start gap-3 p-4 bg-blue-50/50 rounded-xl border border-blue-100/50">
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm flex-shrink-0">
-                  <BookOpen size={18} className="text-[#5B8DB8]" />
+                  <BookOpen size={18} className="text-[#8EA0AD]" />
                 </div>
                 <div>
                   <p className="font-semibold text-slate-800 text-sm">Especialista</p>

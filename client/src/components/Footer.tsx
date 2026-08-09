@@ -13,7 +13,7 @@ export default function Footer() {
               className="h-10 w-10 rounded-full object-cover"
             />
             <div>
-              <p className="font-script text-lg text-[#5B8DB8]">Psi. Raíssa Alcoforado</p>
+              <p className="font-script text-lg text-[#8EA0AD]">Psi. Raíssa Alcoforado</p>
               <p className="text-xs text-slate-500">Psicóloga Infantojuvenil · CRP 11/19565</p>
             </div>
           </div>

@@ -20,11 +20,11 @@ const benefits = [
 
 export default function ApproachSection() {
   return (
-    <section id="abordagem" className="py-20 bg-white">
+    <section id="abordagem" className="py-20 bg-[#F5EDE7]">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
-            <p className="font-script text-2xl text-[#5B8DB8]">Abordagem</p>
+            <p className="font-script text-2xl text-[#8EA0AD]">Abordagem</p>
             <h2 className="font-serif-display text-3xl md:text-4xl font-bold text-slate-800 leading-tight">
               Terapia Cognitivo Comportamental
             </h2>
@@ -37,7 +37,7 @@ export default function ApproachSection() {
             <div className="space-y-3 pt-2">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <CheckCircle2 size={18} className="text-[#5B8DB8] flex-shrink-0" />
+                  <CheckCircle2 size={18} className="text-[#8EA0AD] flex-shrink-0" />
                   <span className="text-slate-700 text-sm">{benefit}</span>
                 </div>
               ))}
@@ -50,7 +50,7 @@ export default function ApproachSection() {
                 key={index}
                 className="flex gap-4 p-5 bg-blue-50/40 rounded-2xl border border-blue-100/50 hover:bg-blue-50/70 transition-colors"
               >
-                <span className="text-2xl font-bold text-[#5B8DB8]/40 font-serif-display flex-shrink-0">
+                <span className="text-2xl font-bold text-[#8EA0AD]/40 font-serif-display flex-shrink-0">
                   {step.number}
                 </span>
                 <div>

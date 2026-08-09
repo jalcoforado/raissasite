@@ -48,7 +48,7 @@ export default function ServicesSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-blue-50/30 pointer-events-none" />
       <div className="container relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="font-script text-2xl text-[#5B8DB8] mb-2">Serviços</p>
+          <p className="font-script text-2xl text-[#8EA0AD] mb-2">Serviços</p>
           <h2 className="font-serif-display text-3xl md:text-4xl font-bold text-slate-800 leading-tight mb-4">
             Como posso ajudar sua família
           </h2>
@@ -70,7 +70,7 @@ export default function ServicesSection() {
                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors ${
                   isBlue ? "bg-blue-50 group-hover:bg-blue-100" : "bg-pink-50 group-hover:bg-pink-100"
                 }`}>
-                  <Icon size={22} className={isBlue ? "text-[#5B8DB8]" : "text-[#D4919A]"} />
+                  <Icon size={22} className={isBlue ? "text-[#8EA0AD]" : "text-[#D4919A]"} />
                 </div>
                 <h3 className="font-semibold text-slate-800 text-base mb-2">{service.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{service.description}</p>

@@ -33,7 +33,7 @@ export default function FamilySection() {
             </div>
             <Button
               asChild
-              className="bg-[#5B8DB8] hover:bg-[#4A7CA7] text-white rounded-full px-6 shadow-sm mt-4"
+              className="bg-[#8EA0AD] hover:bg-[#7E98A9] text-white rounded-full px-6 shadow-sm mt-4"
             >
               <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20orienta%C3%A7%C3%A3o%20parental." target="_blank" rel="noopener noreferrer">
                 Saiba mais sobre orientação parental

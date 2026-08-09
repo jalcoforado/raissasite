@@ -40,7 +40,7 @@ export default function Header() {
             className="h-12 w-12 rounded-full object-cover ring-2 ring-blue-100 group-hover:ring-blue-200 transition-all"
           />
           <div className="hidden sm:block">
-            <span className="font-script text-xl text-[#5B8DB8] block leading-tight">
+            <span className="font-script text-xl text-[#8EA0AD] block leading-tight">
               Psi. Raíssa Alcoforado
             </span>
             <span className="text-[10px] text-slate-500 tracking-wide uppercase">
@@ -54,14 +54,14 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#5B8DB8] transition-colors duration-200 rounded-lg hover:bg-blue-50/50"
+              className="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#8EA0AD] transition-colors duration-200 rounded-lg hover:bg-blue-50/50"
             >
               {link.label}
             </a>
           ))}
           <Button
             asChild
-            className="ml-3 bg-[#5B8DB8] hover:bg-[#4A7CA7] text-white rounded-full px-6 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="ml-3 bg-[#8EA0AD] hover:bg-[#7E98A9] text-white rounded-full px-6 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
               Agendar Consulta
@@ -70,7 +70,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="lg:hidden p-2 text-slate-600 hover:text-[#5B8DB8] transition-colors"
+          className="lg:hidden p-2 text-slate-600 hover:text-[#8EA0AD] transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
@@ -84,7 +84,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium text-slate-600 hover:text-[#5B8DB8] py-3 border-b border-blue-50/50 last:border-0"
+              className="block text-sm font-medium text-slate-600 hover:text-[#8EA0AD] py-3 border-b border-blue-50/50 last:border-0"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
@@ -92,7 +92,7 @@ export default function Header() {
           ))}
           <Button
             asChild
-            className="w-full bg-[#5B8DB8] hover:bg-[#4A7CA7] text-white rounded-full mt-3"
+            className="w-full bg-[#8EA0AD] hover:bg-[#7E98A9] text-white rounded-full mt-3"
           >
             <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
               Agendar Consulta

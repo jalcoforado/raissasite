@@ -13,12 +13,12 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="space-y-6 text-center lg:text-left">
-            <p className="text-sm font-medium text-[#5B8DB8] uppercase tracking-widest">
+            <p className="text-sm font-medium text-[#8EA0AD] uppercase tracking-widest">
               Terapia Cognitivo Comportamental
             </p>
 
             <h1 className="leading-tight">
-              <span className="font-script text-5xl md:text-7xl text-[#5B8DB8] block">
+              <span className="font-script text-5xl md:text-7xl text-[#8EA0AD] block">
                 Psi. Raíssa Alcoforado
               </span>
             </h1>
@@ -33,7 +33,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#5B8DB8] hover:bg-[#4A7CA7] text-white rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+                className="bg-[#8EA0AD] hover:bg-[#7E98A9] text-white rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
               >
                 <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
                   Agendar uma conversa
@@ -43,7 +43,7 @@ export default function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-[#5B8DB8]/30 text-[#5B8DB8] hover:bg-[#5B8DB8]/5 rounded-full px-8 py-6 text-base transition-all duration-200"
+                className="border-[#8EA0AD]/30 text-[#8EA0AD] hover:bg-[#8EA0AD]/5 rounded-full px-8 py-6 text-base transition-all duration-200"
               >
                 <a href="#servicos">Conheça os serviços</a>
               </Button>
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
             <div className="flex items-center gap-4 justify-center lg:justify-start pt-2 text-sm text-slate-500">
               <span className="font-semibold text-slate-700">CRP 11/19565</span>
-              <span className="w-1 h-1 bg-[#5B8DB8] rounded-full" />
+              <span className="w-1 h-1 bg-[#8EA0AD] rounded-full" />
               <span>Presencial e online</span>
             </div>
           </div>

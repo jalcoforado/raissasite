@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import ApproachSection from "@/components/ApproachSection";
 import FamilySection from "@/components/FamilySection";
+import FAQSection from "@/components/FAQSection";
 import ProSection from "@/components/ProSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <ServicesSection />
         <ApproachSection />
         <FamilySection />
+        <FAQSection />
         <ProSection />
         <ContactSection />
       </main>
@@ -31,4 +33,3 @@ export default function Home() {
     </div>
   );
 }
-

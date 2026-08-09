@@ -26,3 +26,4 @@
 - [x] Redesign v2: gingham/plaid pattern as brand identity background
 - [x] Redesign v2: mix of delicate script + bold display fonts
 - [x] Redesign v2: update all components to match new pastel blue direction
+- [x] Create FAQ section about child therapy process

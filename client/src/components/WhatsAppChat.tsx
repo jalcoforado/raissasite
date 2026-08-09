@@ -1,24 +1,40 @@
 /**
- * WhatsApp Chat Widget — Floating button + chat popup for questions and scheduling
+ * AI Chat Widget — Floating button + intelligent chat that answers questions
+ * Uses tRPC to call the LLM backend for AI responses
  * Design: Matches the handcrafted aesthetic with Rosa Antigo accent
  */
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MessageCircle, X, Send, Clock, Phone } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 
 const WHATSAPP_NUMBER = "5585981173003";
 
-const quickMessages = [
-  "Olá! Gostaria de agendar uma consulta.",
-  "Olá! Gostaria de saber mais sobre a orientação parental.",
-  "Olá! Tenho dúvidas sobre o atendimento infantil.",
-  "Olá! Qual o valor da consulta?",
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+const quickQuestions = [
+  "Quais serviços a Raíssa oferece?",
+  "Como funciona a orientação parental?",
+  "Meu filho está com dificuldades na escola, podem ajudar?",
+  "Qual o horário de atendimento?",
 ];
 
 export default function WhatsAppChat() {
   const [isOpen, setIsOpen] = useState(false);
-  const [customMessage, setCustomMessage] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [showQuickQuestions, setShowQuickQuestions] = useState(true);
   const chatRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const chatMutation = trpc.chat.sendMessage.useMutation();
+
+  // Scroll to bottom when new messages arrive
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, chatMutation.isPending]);
 
   // Close on outside click
   useEffect(() => {
@@ -33,26 +49,46 @@ export default function WhatsAppChat() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  const sendMessage = (message: string) => {
-    const encodedMessage = encodeURIComponent(message);
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`,
-      "_blank"
-    );
-  };
+  const sendMessage = async (text: string) => {
+    if (!text.trim()) return;
 
-  const handleCustomSend = () => {
-    if (customMessage.trim()) {
-      sendMessage(customMessage.trim());
-      setCustomMessage("");
+    const userMessage: ChatMessage = { role: "user", content: text.trim() };
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
+    setInputValue("");
+    setShowQuickQuestions(false);
+
+    try {
+      const result = await chatMutation.mutateAsync({
+        messages: updatedMessages,
+      });
+      const responseContent = typeof result.message === "string" 
+        ? result.message 
+        : "Desculpe, não consegui processar a resposta.";
+      setMessages([...updatedMessages, { role: "assistant", content: responseContent }]);
+    } catch {
+      setMessages([
+        ...updatedMessages,
+        {
+          role: "assistant",
+          content: "Desculpe, tive um probleminha. Tente novamente ou entre em contato pelo WhatsApp (85) 98117-3003!",
+        },
+      ]);
     }
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleCustomSend();
+      sendMessage(inputValue);
     }
+  };
+
+  const openWhatsApp = () => {
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta.")}`,
+      "_blank"
+    );
   };
 
   return (
@@ -76,64 +112,121 @@ export default function WhatsAppChat() {
                   <p className="font-semibold text-[#6B5E5E] text-sm">Raíssa Alcoforado</p>
                   <div className="flex items-center gap-1">
                     <Clock size={10} className="text-[#A8C9A5]" />
-                    <p className="text-[10px] text-[#6B5E5E]/60">Responde em até 1h</p>
+                    <p className="text-[10px] text-[#6B5E5E]/60">Assistente virtual</p>
                   </div>
                 </div>
               </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1.5 hover:bg-[#D4919A]/10 rounded-full transition-colors"
-                aria-label="Fechar chat"
-              >
-                <X size={18} className="text-[#6B5E5E]/60" />
-              </button>
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={openWhatsApp}
+                  className="p-1.5 hover:bg-[#A8C9A5]/15 rounded-full transition-colors"
+                  aria-label="Abrir WhatsApp"
+                  title="Falar no WhatsApp"
+                >
+                  <Phone size={16} className="text-[#A8C9A5]" />
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-1.5 hover:bg-[#D4919A]/10 rounded-full transition-colors"
+                  aria-label="Fechar chat"
+                >
+                  <X size={18} className="text-[#6B5E5E]/60" />
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Chat Body */}
-          <div className="p-4 space-y-4 max-h-[400px] overflow-y-auto">
-            {/* Welcome message bubble */}
+          <div className="p-4 space-y-3 max-h-[350px] overflow-y-auto">
+            {/* Welcome message */}
             <div className="bg-[#FBF7F0] rounded-2xl rounded-tl-sm p-3.5 border border-[#F0E6D8] max-w-[85%]">
               <p className="text-sm text-[#6B5E5E] leading-relaxed">
-                Olá! 👋 Sou a Raíssa. Como posso ajudar você e sua família? 
-                Escolha uma opção abaixo ou escreva sua mensagem.
+                Olá! Sou a assistente virtual da Raíssa. Posso tirar suas dúvidas sobre os serviços, a abordagem terapêutica e como funciona o atendimento. Pergunte o que quiser!
               </p>
               <p className="text-[10px] text-[#6B5E5E]/40 mt-1.5 flex items-center gap-1">
                 <Clock size={9} /> Seg a Sex, 8h às 21h
               </p>
             </div>
 
-            {/* Quick message options */}
-            <div className="space-y-2">
-              <p className="text-[10px] text-[#6B5E5E]/50 uppercase tracking-wider font-medium">
-                Mensagens rápidas
-              </p>
-              {quickMessages.map((msg, index) => (
-                <button
-                  key={index}
-                  onClick={() => sendMessage(msg)}
-                  className="w-full text-left p-3 bg-white border-2 border-dashed border-[#8EB4D7]/25 rounded-xl text-sm text-[#6B5E5E] hover:border-[#D4919A]/40 hover:bg-[#FBF7F0] transition-all duration-200 leading-relaxed"
+            {/* Quick questions (shown initially) */}
+            {showQuickQuestions && messages.length === 0 && (
+              <div className="space-y-2">
+                <p className="text-[10px] text-[#6B5E5E]/50 uppercase tracking-wider font-medium">
+                  Perguntas frequentes
+                </p>
+                {quickQuestions.map((q, index) => (
+                  <button
+                    key={index}
+                    onClick={() => sendMessage(q)}
+                    className="w-full text-left p-3 bg-white border-2 border-dashed border-[#8EB4D7]/25 rounded-xl text-sm text-[#6B5E5E] hover:border-[#D4919A]/40 hover:bg-[#FBF7F0] transition-all duration-200 leading-relaxed"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Chat messages */}
+            {messages.map((msg, index) => (
+              <div
+                key={index}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
+                    msg.role === "user"
+                      ? "bg-[#D4919A]/10 text-[#6B5E5E] rounded-br-sm border border-[#D4919A]/20"
+                      : "bg-[#FBF7F0] text-[#6B5E5E] rounded-tl-sm border border-[#F0E6D8]"
+                  }`}
                 >
-                  {msg}
-                </button>
-              ))}
-            </div>
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+
+            {/* Typing indicator */}
+            {chatMutation.isPending && (
+              <div className="flex justify-start">
+                <div className="bg-[#FBF7F0] rounded-2xl rounded-tl-sm p-3 border border-[#F0E6D8]">
+                  <div className="flex gap-1.5 items-center">
+                    <div className="w-2 h-2 bg-[#D4919A]/50 rounded-full animate-bounce [animation-delay:0ms]" />
+                    <div className="w-2 h-2 bg-[#D4919A]/50 rounded-full animate-bounce [animation-delay:150ms]" />
+                    <div className="w-2 h-2 bg-[#D4919A]/50 rounded-full animate-bounce [animation-delay:300ms]" />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div ref={messagesEndRef} />
           </div>
+
+          {/* WhatsApp scheduling hint */}
+          {messages.length > 2 && (
+            <div className="px-4 pb-2">
+              <button
+                onClick={openWhatsApp}
+                className="w-full text-center py-2 px-3 bg-[#A8C9A5]/10 border border-dashed border-[#A8C9A5]/30 rounded-xl text-xs text-[#6B5E5E]/70 hover:bg-[#A8C9A5]/20 transition-colors"
+              >
+                📱 Quer agendar? Fale diretamente com a Raíssa no WhatsApp
+              </button>
+            </div>
+          )}
 
           {/* Input area */}
           <div className="p-3 border-t border-dashed border-[#D4919A]/20 bg-[#FBF7F0]/50">
             <div className="flex items-center gap-2">
               <input
                 type="text"
-                value={customMessage}
-                onChange={(e) => setCustomMessage(e.target.value)}
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="Escreva sua mensagem..."
-                className="flex-1 px-4 py-2.5 bg-white border border-[#F0E6D8] rounded-full text-sm text-[#6B5E5E] placeholder:text-[#6B5E5E]/40 focus:outline-none focus:border-[#D4919A]/40 transition-colors"
+                placeholder="Pergunte algo..."
+                disabled={chatMutation.isPending}
+                className="flex-1 px-4 py-2.5 bg-white border border-[#F0E6D8] rounded-full text-sm text-[#6B5E5E] placeholder:text-[#6B5E5E]/40 focus:outline-none focus:border-[#D4919A]/40 transition-colors disabled:opacity-50"
               />
               <button
-                onClick={handleCustomSend}
-                disabled={!customMessage.trim()}
+                onClick={() => sendMessage(inputValue)}
+                disabled={!inputValue.trim() || chatMutation.isPending}
                 className="w-9 h-9 bg-[#D4919A] hover:bg-[#c07e87] disabled:bg-[#D4919A]/40 text-white rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 disabled:hover:scale-100"
                 aria-label="Enviar mensagem"
               >
@@ -152,14 +245,14 @@ export default function WhatsAppChat() {
             ? "bg-[#6B5E5E] hover:bg-[#5a4f4f]"
             : "bg-[#D4919A] hover:bg-[#c07e87]"
         }`}
-        aria-label={isOpen ? "Fechar chat" : "Abrir chat WhatsApp"}
+        aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         {isOpen ? (
           <X size={22} className="text-white" />
         ) : (
           <MessageCircle size={22} className="text-white" />
         )}
-        
+
         {/* Pulse animation when closed */}
         {!isOpen && (
           <span className="absolute inset-0 rounded-full bg-[#D4919A] animate-ping opacity-20" />

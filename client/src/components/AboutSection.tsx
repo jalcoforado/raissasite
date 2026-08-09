@@ -17,9 +17,9 @@ export default function AboutSection() {
             {/* Inner frame with slight offset for depth */}
             <div className="absolute -inset-1 border border-[#C9A96E]/20 rounded-xl" />
             <img
-              src="/manus-storage/about-illustration_6c6a1f87.png"
-              alt="Raíssa em sessão com criança"
-              className="relative z-10 w-full rounded-xl shadow-lg"
+              src="/manus-storage/raissa-photo_6d3c1d4a.jpeg"
+              alt="Raíssa Alcoforado - Psicóloga Infantojuvenil"
+              className="relative z-10 w-full rounded-xl shadow-lg object-cover aspect-[3/4]"
             />
             {/* Floating badge — like a fabric tag */}
             <div className="absolute -bottom-5 -right-3 z-20 bg-white rounded-xl shadow-lg p-4 border-2 border-dashed border-[#A8C9A5]/30">

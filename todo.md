@@ -13,3 +13,4 @@
 - [x] Vitest tests for chat endpoint
 - [x] Add CRP 11/19565 to the site
 - [x] Update chatbot to inform pricing: avulsa R$250, pacote 4 sessões R$200/cada
+- [x] Add Raíssa's real photo to the About section

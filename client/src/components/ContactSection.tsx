@@ -39,7 +39,7 @@ export default function ContactSection() {
               <Instagram size={20} className="text-[#5B8DB8]" />
             </div>
             <p className="font-semibold text-slate-800 text-sm">Instagram</p>
-            <p className="text-sm text-slate-500 mt-1">@raissaalcoforado</p>
+            <a href="https://www.instagram.com/raissaalcoforado" target="_blank" rel="noopener noreferrer" className="text-sm text-[#5B8DB8] mt-1 hover:underline inline-block">@raissaalcoforado</a>
           </div>
         </div>
 

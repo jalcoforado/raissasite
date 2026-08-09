@@ -84,12 +84,12 @@ export default function WhatsAppChat() {
       {isOpen && (
         <div className="absolute bottom-20 right-0 w-[340px] sm:w-[380px] bg-white rounded-2xl shadow-2xl border border-blue-100 overflow-hidden animate-in slide-in-from-bottom-4 fade-in duration-300">
           {/* Header */}
-          <div className="bg-[#8EA0AD] p-4">
+          <div className="bg-[#5B8DB8] p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <img src="/manus-storage/raissa-logo_e3b768df.jpeg" alt="Raíssa" className="w-10 h-10 rounded-full border-2 border-white/30" />
-                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#8EA0AD]" />
+                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 rounded-full border-2 border-[#5B8DB8]" />
                 </div>
                 <div>
                   <p className="font-semibold text-white text-sm">Raíssa Alcoforado</p>
@@ -125,7 +125,7 @@ export default function WhatsAppChat() {
                   <button
                     key={index}
                     onClick={() => sendMessage(q)}
-                    className="w-full text-left p-3 bg-white border border-blue-100 rounded-xl text-sm text-slate-700 hover:border-[#8EA0AD]/40 hover:bg-blue-50/30 transition-all duration-200 leading-relaxed shadow-sm"
+                    className="w-full text-left p-3 bg-white border border-blue-100 rounded-xl text-sm text-slate-700 hover:border-[#5B8DB8]/40 hover:bg-blue-50/30 transition-all duration-200 leading-relaxed shadow-sm"
                   >
                     {q}
                   </button>
@@ -137,7 +137,7 @@ export default function WhatsAppChat() {
               <div key={index} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={`max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed ${
                   msg.role === "user"
-                    ? "bg-[#8EA0AD] text-white rounded-br-sm"
+                    ? "bg-[#5B8DB8] text-white rounded-br-sm"
                     : "bg-white text-slate-700 rounded-tl-sm border border-blue-50 shadow-sm"
                 }`}>
                   {msg.content}
@@ -149,9 +149,9 @@ export default function WhatsAppChat() {
               <div className="flex justify-start">
                 <div className="bg-white rounded-2xl rounded-tl-sm p-3 border border-blue-50 shadow-sm">
                   <div className="flex gap-1.5 items-center">
-                    <div className="w-2 h-2 bg-[#8EA0AD]/50 rounded-full animate-bounce [animation-delay:0ms]" />
-                    <div className="w-2 h-2 bg-[#8EA0AD]/50 rounded-full animate-bounce [animation-delay:150ms]" />
-                    <div className="w-2 h-2 bg-[#8EA0AD]/50 rounded-full animate-bounce [animation-delay:300ms]" />
+                    <div className="w-2 h-2 bg-[#5B8DB8]/50 rounded-full animate-bounce [animation-delay:0ms]" />
+                    <div className="w-2 h-2 bg-[#5B8DB8]/50 rounded-full animate-bounce [animation-delay:150ms]" />
+                    <div className="w-2 h-2 bg-[#5B8DB8]/50 rounded-full animate-bounce [animation-delay:300ms]" />
                   </div>
                 </div>
               </div>
@@ -177,12 +177,12 @@ export default function WhatsAppChat() {
                 onKeyDown={handleKeyDown}
                 placeholder="Pergunte algo..."
                 disabled={chatMutation.isPending}
-                className="flex-1 px-4 py-2.5 bg-blue-50/30 border border-blue-100 rounded-full text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-[#8EA0AD]/40 transition-colors disabled:opacity-50"
+                className="flex-1 px-4 py-2.5 bg-blue-50/30 border border-blue-100 rounded-full text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:border-[#5B8DB8]/40 transition-colors disabled:opacity-50"
               />
               <button
                 onClick={() => sendMessage(inputValue)}
                 disabled={!inputValue.trim() || chatMutation.isPending}
-                className="w-9 h-9 bg-[#8EA0AD] hover:bg-[#7E98A9] disabled:bg-blue-200 text-white rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 disabled:hover:scale-100"
+                className="w-9 h-9 bg-[#5B8DB8] hover:bg-[#4A7CA7] disabled:bg-blue-200 text-white rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 disabled:hover:scale-100"
                 aria-label="Enviar mensagem"
               >
                 <Send size={14} />
@@ -196,12 +196,12 @@ export default function WhatsAppChat() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`group relative w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 ${
-          isOpen ? "bg-slate-600 hover:bg-slate-700" : "bg-[#8EA0AD] hover:bg-[#7E98A9]"
+          isOpen ? "bg-slate-600 hover:bg-slate-700" : "bg-[#5B8DB8] hover:bg-[#4A7CA7]"
         }`}
         aria-label={isOpen ? "Fechar chat" : "Abrir chat"}
       >
         {isOpen ? <X size={22} className="text-white" /> : <MessageCircle size={22} className="text-white" />}
-        {!isOpen && <span className="absolute inset-0 rounded-full bg-[#8EA0AD] animate-ping opacity-20" />}
+        {!isOpen && <span className="absolute inset-0 rounded-full bg-[#5B8DB8] animate-ping opacity-20" />}
       </button>
 
       {!isOpen && (

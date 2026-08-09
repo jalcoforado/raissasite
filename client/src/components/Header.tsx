@@ -40,7 +40,7 @@ export default function Header() {
             className="h-12 w-12 rounded-full object-cover ring-2 ring-blue-100 group-hover:ring-blue-200 transition-all"
           />
           <div className="hidden sm:block">
-            <span className="font-script text-2xl text-[#5B8DB8] block leading-tight">
+            <span className="font-script text-xl text-[#5B8DB8] block leading-tight">
               Psi. Raíssa Alcoforado
             </span>
             <span className="text-[10px] text-slate-500 tracking-wide uppercase">

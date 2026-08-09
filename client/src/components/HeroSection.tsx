@@ -18,11 +18,8 @@ export default function HeroSection() {
             </p>
 
             <h1 className="leading-tight">
-              <span className="font-script text-5xl md:text-6xl text-[#5B8DB8] block mb-2">
-                Psi. Raíssa
-              </span>
-              <span className="font-serif-display text-4xl md:text-5xl font-bold text-slate-800 block">
-                Alcoforado
+              <span className="font-script text-5xl md:text-7xl text-[#5B8DB8] block">
+                Psi. Raíssa Alcoforado
               </span>
             </h1>
 

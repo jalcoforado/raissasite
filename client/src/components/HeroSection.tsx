@@ -60,7 +60,7 @@ export default function HeroSection() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative max-w-md">
               <img
-                src="/manus-storage/raissa-hero-nobg_05a433be.png"
+                src="/manus-storage/raissa-hero-clean_10d76ed4.png"
                 alt="Raíssa Alcoforado - Psicóloga Infantojuvenil"
                 className="w-full h-auto drop-shadow-xl"
               />

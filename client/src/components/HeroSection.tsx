@@ -1,88 +1,78 @@
 /**
- * Hero Section — Clean, professional, welcoming
- * Design: Modern layout with warm tones, no excessive decoration
+ * Hero Section — Pastel gingham background, script + bold font mix
  */
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="pt-28 pb-20 bg-warm relative overflow-hidden">
-      {/* Subtle gradient accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-50/50 to-transparent pointer-events-none" />
+    <section className="pt-28 pb-20 relative overflow-hidden bg-gingham min-h-[85vh] flex items-center">
+      {/* Soft gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-blue-50/30 to-pink-50/20 pointer-events-none" />
       
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-stone-100">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full" />
-              <span className="text-sm text-stone-600 font-medium">
-                Terapia Cognitivo Comportamental
-              </span>
-            </div>
-
-            <h1 className="font-serif-display text-4xl md:text-5xl lg:text-[3.5rem] text-stone-800 leading-[1.15]">
-              Cuidado especializado para crianças e adolescentes
-            </h1>
-
-            <p className="text-lg text-stone-600 leading-relaxed max-w-lg">
-              Psicóloga infantojuvenil com abordagem baseada em evidências. 
-              Ajudo famílias a fortalecer vínculos e promover o desenvolvimento 
-              emocional saudável.
+          <div className="space-y-6 text-center lg:text-left">
+            <p className="text-sm font-medium text-[#5B8DB8] uppercase tracking-widest">
+              Terapia Cognitivo Comportamental
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <h1 className="leading-tight">
+              <span className="font-script text-5xl md:text-6xl text-[#5B8DB8] block mb-2">
+                Psi. Raíssa
+              </span>
+              <span className="font-serif-display text-4xl md:text-5xl font-bold text-slate-800 block">
+                Alcoforado
+              </span>
+            </h1>
+
+            <p className="text-lg text-slate-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
+              Psicóloga infantojuvenil especializada em acolher famílias, 
+              fortalecer vínculos e promover o desenvolvimento emocional saudável 
+              de crianças e adolescentes.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
               <Button
                 asChild
                 size="lg"
-                className="bg-stone-800 hover:bg-stone-900 text-white rounded-lg px-7 py-6 text-base shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="bg-[#5B8DB8] hover:bg-[#4A7CA7] text-white rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
               >
                 <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
-                  Agendar consulta
-                  <ArrowRight size={18} className="ml-2" />
+                  Agendar uma conversa
                 </a>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-stone-200 text-stone-700 hover:bg-stone-50 rounded-lg px-7 py-6 text-base transition-all duration-200"
+                className="border-[#5B8DB8]/30 text-[#5B8DB8] hover:bg-[#5B8DB8]/5 rounded-full px-8 py-6 text-base transition-all duration-200"
               >
-                <a href="#servicos">
-                  Conheça os serviços
-                </a>
+                <a href="#servicos">Conheça os serviços</a>
               </Button>
             </div>
 
-            {/* Trust indicators */}
-            <div className="flex items-center gap-6 pt-4 text-sm text-stone-500">
-              <span className="font-semibold text-stone-700">CRP 11/19565</span>
-              <div className="w-px h-4 bg-stone-200" />
+            <div className="flex items-center gap-4 justify-center lg:justify-start pt-2 text-sm text-slate-500">
+              <span className="font-semibold text-slate-700">CRP 11/19565</span>
+              <span className="w-1 h-1 bg-[#5B8DB8] rounded-full" />
               <span>Presencial e online</span>
             </div>
           </div>
 
-          {/* Right: Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-stone-200/50">
-              <img
-                src="/manus-storage/hero-banner_c3d8f0d4.png"
-                alt="Consultório de psicologia infantojuvenil"
-                className="w-full aspect-[4/3] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 border border-stone-100">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center">
-                  <span className="text-emerald-600 text-lg">✓</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-stone-800">Especialista em TCC</p>
-                  <p className="text-xs text-stone-500">Infantojuvenil</p>
-                </div>
+          {/* Right: Photo */}
+          <div className="relative flex justify-center">
+            <div className="relative">
+              {/* Decorative circle behind photo */}
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-blue-100/50 to-pink-100/30 blur-sm" />
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                <img
+                  src="/manus-storage/raissa-photo_6d3c1d4a.jpeg"
+                  alt="Raíssa Alcoforado - Psicóloga Infantojuvenil"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
+              {/* Decorative star */}
+              <div className="absolute -top-2 -right-2 text-3xl">⭐</div>
             </div>
           </div>
         </div>

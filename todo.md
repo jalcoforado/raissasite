@@ -22,3 +22,7 @@
 - [x] Redesign: cleaner typography, reduce excessive script fonts
 - [x] Redesign: remove excessive dashed borders and floral elements
 - [x] Redesign: update all sections to match new visual direction
+- [x] Redesign v2: predominant pastel blue palette based on PDF reference
+- [x] Redesign v2: gingham/plaid pattern as brand identity background
+- [x] Redesign v2: mix of delicate script + bold display fonts
+- [x] Redesign v2: update all components to match new pastel blue direction

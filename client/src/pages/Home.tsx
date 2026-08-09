@@ -9,6 +9,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ApproachSection from "@/components/ApproachSection";
 import FamilySection from "@/components/FamilySection";
 import FAQSection from "@/components/FAQSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ProSection from "@/components/ProSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <ApproachSection />
         <FamilySection />
         <FAQSection />
+        <TestimonialsSection />
         <ProSection />
         <ContactSection />
       </main>

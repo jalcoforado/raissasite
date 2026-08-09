@@ -149,86 +149,86 @@
 
 /* Pastel Gingham/Plaid pattern — Brand Identity */
 .bg-gingham {
-  background-color: #fefefe;
+  background-color: #ffffff;
   background-image:
-    /* Blue vertical bands */
+    /* Vertical bands: white | blue | white | yellow/cream | white | pink | white | blue */
     repeating-linear-gradient(
       90deg,
       transparent 0px,
-      transparent 70px,
-      #d6e8f5 70px,
-      #d6e8f5 140px,
-      transparent 140px,
-      transparent 210px,
-      #f5e4d9 210px,
-      #f5e4d9 280px,
-      transparent 280px,
-      transparent 350px,
-      #f9dfe2 350px,
-      #f9dfe2 420px,
-      transparent 420px,
-      transparent 490px,
-      #cde2f2 490px,
-      #cde2f2 560px
+      transparent 80px,
+      rgba(201, 222, 243, 0.45) 80px,
+      rgba(201, 222, 243, 0.45) 180px,
+      transparent 180px,
+      transparent 260px,
+      rgba(252, 240, 210, 0.5) 260px,
+      rgba(252, 240, 210, 0.5) 360px,
+      transparent 360px,
+      transparent 440px,
+      rgba(250, 215, 220, 0.45) 440px,
+      rgba(250, 215, 220, 0.45) 540px,
+      transparent 540px,
+      transparent 620px,
+      rgba(201, 222, 243, 0.35) 620px,
+      rgba(201, 222, 243, 0.35) 700px
     ),
-    /* Horizontal bands */
+    /* Horizontal bands: same pattern */
     repeating-linear-gradient(
       0deg,
       transparent 0px,
-      transparent 70px,
-      #d6e8f5 70px,
-      #d6e8f5 140px,
-      transparent 140px,
-      transparent 210px,
-      #f5e4d9 210px,
-      #f5e4d9 280px,
-      transparent 280px,
-      transparent 350px,
-      #f9dfe2 350px,
-      #f9dfe2 420px,
-      transparent 420px,
-      transparent 490px,
-      #cde2f2 490px,
-      #cde2f2 560px
+      transparent 80px,
+      rgba(201, 222, 243, 0.45) 80px,
+      rgba(201, 222, 243, 0.45) 180px,
+      transparent 180px,
+      transparent 260px,
+      rgba(252, 240, 210, 0.5) 260px,
+      rgba(252, 240, 210, 0.5) 360px,
+      transparent 360px,
+      transparent 440px,
+      rgba(250, 215, 220, 0.45) 440px,
+      rgba(250, 215, 220, 0.45) 540px,
+      transparent 540px,
+      transparent 620px,
+      rgba(201, 222, 243, 0.35) 620px,
+      rgba(201, 222, 243, 0.35) 700px
     );
-  background-size: 560px 560px;
+  background-size: 700px 700px;
 }
 
 /* Light gingham for subtle backgrounds */
 .bg-gingham-light {
-  background-color: #fefefe;
+  background-color: #ffffff;
   background-image:
     repeating-linear-gradient(
       90deg,
       transparent 0px,
       transparent 60px,
-      #ddeaf4 60px,
-      #ddeaf4 120px,
-      transparent 120px,
-      transparent 180px,
-      #f7e8de 180px,
-      #f7e8de 240px,
-      transparent 240px,
-      transparent 300px,
-      #fae3e5 300px,
-      #fae3e5 360px
+      rgba(201, 222, 243, 0.35) 60px,
+      rgba(201, 222, 243, 0.35) 140px,
+      transparent 140px,
+      transparent 200px,
+      rgba(252, 240, 210, 0.4) 200px,
+      rgba(252, 240, 210, 0.4) 280px,
+      transparent 280px,
+      transparent 340px,
+      rgba(250, 215, 220, 0.35) 340px,
+      rgba(250, 215, 220, 0.35) 420px
     ),
     repeating-linear-gradient(
       0deg,
       transparent 0px,
       transparent 60px,
-      #ddeaf4 60px,
-      #ddeaf4 120px,
-      transparent 120px,
-      transparent 180px,
-      #f7e8de 180px,
-      #f7e8de 240px,
-      transparent 240px,
-      transparent 300px,
-      #fae3e5 300px,
-      #fae3e5 360px
+      rgba(201, 222, 243, 0.35) 60px,
+      rgba(201, 222, 243, 0.35) 140px,
+      transparent 140px,
+      transparent 200px,
+      rgba(252, 240, 210, 0.4) 200px,
+      rgba(252, 240, 210, 0.4) 280px,
+      transparent 280px,
+      transparent 340px,
+      rgba(250, 215, 220, 0.35) 340px,
+      rgba(250, 215, 220, 0.35) 420px
     );
-  background-size: 360px 360px;
+  background-size: 420px 420px;
 }
 
 /* Soft scroll behavior */

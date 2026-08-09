@@ -21,6 +21,7 @@ export default function Header() {
     { label: "Serviços", href: "#servicos" },
     { label: "Abordagem", href: "#abordagem" },
     { label: "Família", href: "#familia" },
+    { label: "Para Psicólogos", href: "#para-psicologos" },
     { label: "Contato", href: "#contato" },
   ];
 

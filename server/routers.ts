@@ -30,6 +30,14 @@ SERVIÇOS OFERECIDOS:
 5. Saúde Emocional - Trabalho com ansiedade, medos, tristeza e autoestima
 6. Relacionamentos Saudáveis - Fortalecimento de habilidades sociais e emocionais
 
+SERVIÇOS PARA PSICÓLOGOS:
+1. Supervisão Individual - Acompanhamento personalizado para aprimorar a prática clínica (R$ 100/hora)
+2. Supervisão em Grupo - Encontros em grupo para troca de experiências e discussão de casos (valores sob consulta)
+3. Mentoria - Programa para psicólogos que desejam se especializar em atendimento infantojuvenil com TCC
+4. Comunidade - Espaço exclusivo de networking e troca entre psicólogos infantojuvenis
+5. Materiais e Aulas Gratuitas - Conteúdos gratuitos para aprimorar a prática clínica
+6. Workshop - Workshops práticos e imersivos (em breve)
+
 SOBRE A TCC:
 - É uma abordagem cientificamente comprovada
 - Ajuda crianças a entenderem a relação entre pensamentos, emoções e comportamentos

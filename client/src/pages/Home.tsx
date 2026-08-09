@@ -13,6 +13,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloralDivider from "@/components/FloralDivider";
 import WhatsAppChat from "@/components/WhatsAppChat";
+import ProSection from "@/components/ProSection";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
         <FloralDivider variant="rose" />
         <FamilySection />
         <FloralDivider variant="blue" />
+        <ProSection />
+        <FloralDivider variant="green" />
         <ContactSection />
       </main>
       <Footer />

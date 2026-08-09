@@ -14,3 +14,6 @@
 - [x] Add CRP 11/19565 to the site
 - [x] Update chatbot to inform pricing: avulsa R$250, pacote 4 sessões R$200/cada
 - [x] Add Raíssa's real photo to the About section
+- [x] Add "Para Psicólogos" section with services for professionals
+- [x] Include: Supervisão Individual (R$100/h), Supervisão em Grupo (consulte), Mentoria, Comunidade, Materiais/Aulas Gratuitas, Workshop (em breve)
+- [x] Add navigation link for the new section

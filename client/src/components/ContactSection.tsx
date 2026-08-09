@@ -39,7 +39,7 @@ export default function ContactSection() {
               <Instagram size={20} className="text-[#5B8DB8]" />
             </div>
             <p className="font-semibold text-slate-800 text-sm">Instagram</p>
-            <p className="text-sm text-slate-500 mt-1">@raissalcoforado</p>
+            <p className="text-sm text-slate-500 mt-1">@raissaalcoforado</p>
           </div>
         </div>
 
@@ -58,3 +58,12 @@ export default function ContactSection() {
     </section>
   );
 }
+        {/* Address */}
+        <div className="text-center mb-8 p-6 bg-blue-50/40 rounded-2xl border border-blue-100/50 max-w-md mx-auto">
+          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 shadow-sm">
+            <MapPin size={20} className="text-[#5B8DB8]" />
+          </div>
+          <p className="font-semibold text-slate-800 text-sm">Local de Atendimento</p>
+          <p className="text-sm text-slate-500 mt-1">Clínica Crescer – Unidade Cambeba</p>
+          <p className="text-sm text-slate-500">Av. Viena Weyne, 680 – Cambeba</p>
+        </div>

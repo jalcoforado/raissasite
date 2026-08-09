@@ -70,7 +70,7 @@ export default function ProSection() {
               size="lg"
               className="border-white/40 text-white hover:bg-white/10 rounded-full px-8 py-6 text-base transition-all duration-200"
             >
-              <a href="https://www.instagram.com/raissalcoforado" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/raissaalcoforado" target="_blank" rel="noopener noreferrer">
                 Acompanhe no Instagram
               </a>
             </Button>

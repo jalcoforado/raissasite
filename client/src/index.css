@@ -149,40 +149,90 @@
 
 /* Pastel Gingham/Plaid pattern — Brand Identity */
 .bg-gingham {
-  background-color: #faf9f7;
+  background-color: #fdfcfa;
   background-image:
-    linear-gradient(0deg, rgba(176, 206, 232, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(176, 206, 232, 0.18) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(176, 206, 232, 0.10) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(176, 206, 232, 0.10) 50%, transparent 50%),
-    linear-gradient(0deg, rgba(220, 185, 205, 0.08) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(200, 180, 220, 0.06) 50%, transparent 50%);
-  background-size:
-    80px 80px,
-    80px 80px,
-    80px 80px,
-    80px 80px,
-    120px 120px,
-    120px 120px;
+    /* Blue vertical bands */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(173, 210, 237, 0.25) 60px,
+      rgba(173, 210, 237, 0.25) 120px
+    ),
+    /* Blue horizontal bands */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 60px,
+      rgba(173, 210, 237, 0.25) 60px,
+      rgba(173, 210, 237, 0.25) 120px
+    ),
+    /* Pink vertical bands (offset) */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 120px,
+      rgba(228, 195, 210, 0.18) 120px,
+      rgba(228, 195, 210, 0.18) 180px
+    ),
+    /* Pink horizontal bands (offset) */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 120px,
+      rgba(228, 195, 210, 0.18) 120px,
+      rgba(228, 195, 210, 0.18) 180px
+    ),
+    /* Lavender vertical bands */
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 180px,
+      rgba(200, 190, 225, 0.12) 180px,
+      rgba(200, 190, 225, 0.12) 240px
+    ),
+    /* Lavender horizontal bands */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 180px,
+      rgba(200, 190, 225, 0.12) 180px,
+      rgba(200, 190, 225, 0.12) 240px
+    );
 }
 
 /* Light gingham for subtle backgrounds */
 .bg-gingham-light {
-  background-color: #fcfbf9;
+  background-color: #fefdfb;
   background-image:
-    linear-gradient(0deg, rgba(176, 206, 232, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(176, 206, 232, 0.12) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(176, 206, 232, 0.07) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(176, 206, 232, 0.07) 50%, transparent 50%),
-    linear-gradient(0deg, rgba(220, 185, 205, 0.05) 50%, transparent 50%),
-    linear-gradient(90deg, rgba(200, 180, 220, 0.04) 50%, transparent 50%);
-  background-size:
-    60px 60px,
-    60px 60px,
-    60px 60px,
-    60px 60px,
-    90px 90px,
-    90px 90px;
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(173, 210, 237, 0.18) 50px,
+      rgba(173, 210, 237, 0.18) 100px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(173, 210, 237, 0.18) 50px,
+      rgba(173, 210, 237, 0.18) 100px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(228, 195, 210, 0.12) 100px,
+      rgba(228, 195, 210, 0.12) 150px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 100px,
+      rgba(228, 195, 210, 0.12) 100px,
+      rgba(228, 195, 210, 0.12) 150px
+    );
 }
 
 /* Soft scroll behavior */

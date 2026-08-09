@@ -56,20 +56,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Photo */}
-          <div className="relative flex justify-center">
-            <div className="relative">
-              {/* Decorative circle behind photo */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-blue-100/50 to-pink-100/30 blur-sm" />
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                <img
-                  src="/manus-storage/raissa-photo_6d3c1d4a.jpeg"
-                  alt="Raíssa Alcoforado - Psicóloga Infantojuvenil"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              {/* Decorative star */}
-              <div className="absolute -top-2 -right-2 text-3xl">⭐</div>
+          {/* Right: Photo - full size, no background */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative max-w-md">
+              <img
+                src="/manus-storage/raissa-hero-nobg_05a433be.png"
+                alt="Raíssa Alcoforado - Psicóloga Infantojuvenil"
+                className="w-full h-auto drop-shadow-xl"
+              />
             </div>
           </div>
         </div>

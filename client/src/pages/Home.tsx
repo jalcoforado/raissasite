@@ -1,25 +1,37 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Landing Page - Raíssa Alcoforado - Psicóloga Infantojuvenil
+ * Design: "Tecido & Afeto" — Handcraft Warmth
+ * Every section includes textile cues: gingham, linen, stitched borders, floral garlands
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import ApproachSection from "@/components/ApproachSection";
+import FamilySection from "@/components/FamilySection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import FloralDivider from "@/components/FloralDivider";
 
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden bg-linen">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <FloralDivider variant="rose" />
+        <AboutSection />
+        <FloralDivider variant="blue" />
+        <ServicesSection />
+        <FloralDivider variant="green" />
+        <ApproachSection />
+        <FloralDivider variant="rose" />
+        <FamilySection />
+        <FloralDivider variant="blue" />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
+

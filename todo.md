@@ -17,3 +17,8 @@
 - [x] Add "Para Psicólogos" section with services for professionals
 - [x] Include: Supervisão Individual (R$100/h), Supervisão em Grupo (consulte), Mentoria, Comunidade, Materiais/Aulas Gratuitas, Workshop (em breve)
 - [x] Add navigation link for the new section
+- [x] Redesign: modernize visual style — less "baby", more professional and contemporary
+- [x] Redesign: new color palette with more contrast and neutral tones
+- [x] Redesign: cleaner typography, reduce excessive script fonts
+- [x] Redesign: remove excessive dashed borders and floral elements
+- [x] Redesign: update all sections to match new visual direction

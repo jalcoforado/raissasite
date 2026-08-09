@@ -40,45 +40,48 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-sans: 'Poppins', sans-serif;
+  --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  --font-script: 'Dancing Script', cursive;
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.98 0.005 80);
-  --foreground: oklch(0.30 0.02 30);
+  --radius: 0.625rem;
+  /* Warm neutral palette — professional yet welcoming */
+  --background: oklch(0.98 0.003 70);
+  --foreground: oklch(0.25 0.015 30);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.30 0.02 30);
+  --card-foreground: oklch(0.25 0.015 30);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.30 0.02 30);
-  --primary: oklch(0.68 0.08 10);
+  --popover-foreground: oklch(0.25 0.015 30);
+  /* Primary: warm terracotta/rose — mature, not baby pink */
+  --primary: oklch(0.60 0.10 20);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.92 0.02 80);
-  --secondary-foreground: oklch(0.35 0.02 30);
-  --muted: oklch(0.95 0.01 80);
-  --muted-foreground: oklch(0.50 0.02 30);
-  --accent: oklch(0.75 0.07 230);
+  /* Secondary: warm sand */
+  --secondary: oklch(0.94 0.01 70);
+  --secondary-foreground: oklch(0.30 0.02 30);
+  --muted: oklch(0.96 0.005 70);
+  --muted-foreground: oklch(0.45 0.02 30);
+  /* Accent: teal/sage — professional complement */
+  --accent: oklch(0.65 0.08 180);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.90 0.02 80);
-  --input: oklch(0.90 0.02 80);
-  --ring: oklch(0.68 0.08 10);
-  --chart-1: oklch(0.68 0.08 10);
-  --chart-2: oklch(0.75 0.07 230);
-  --chart-3: oklch(0.72 0.10 145);
-  --chart-4: oklch(0.85 0.06 80);
-  --chart-5: oklch(0.60 0.05 30);
-  --sidebar: oklch(0.98 0.005 80);
-  --sidebar-foreground: oklch(0.30 0.02 30);
-  --sidebar-primary: oklch(0.68 0.08 10);
+  --border: oklch(0.92 0.005 70);
+  --input: oklch(0.92 0.005 70);
+  --ring: oklch(0.60 0.10 20);
+  --chart-1: oklch(0.60 0.10 20);
+  --chart-2: oklch(0.65 0.08 180);
+  --chart-3: oklch(0.70 0.08 145);
+  --chart-4: oklch(0.75 0.05 80);
+  --chart-5: oklch(0.55 0.05 30);
+  --sidebar: oklch(0.98 0.003 70);
+  --sidebar-foreground: oklch(0.25 0.015 30);
+  --sidebar-primary: oklch(0.60 0.10 20);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.95 0.01 80);
-  --sidebar-accent-foreground: oklch(0.30 0.02 30);
-  --sidebar-border: oklch(0.90 0.02 80);
-  --sidebar-ring: oklch(0.68 0.08 10);
+  --sidebar-accent: oklch(0.96 0.005 70);
+  --sidebar-accent-foreground: oklch(0.25 0.015 30);
+  --sidebar-border: oklch(0.92 0.005 70);
+  --sidebar-ring: oklch(0.60 0.10 20);
 }
 
 @layer base {
@@ -87,7 +90,9 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -132,54 +137,26 @@
   }
 }
 
-/* Custom utility classes for the brand */
-.font-script {
-  font-family: 'Dancing Script', cursive;
-}
-
+/* Brand typography */
 .font-serif-display {
   font-family: 'Playfair Display', serif;
 }
 
-/* Gingham pattern background */
-.bg-gingham {
-  background-image:
-    linear-gradient(45deg, rgba(212, 145, 154, 0.08) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(212, 145, 154, 0.08) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(212, 145, 154, 0.08) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(212, 145, 154, 0.08) 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+.font-display {
+  font-family: 'DM Serif Display', serif;
 }
 
-/* Linen texture background */
-.bg-linen {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23D4919A' fill-opacity='0.03'/%3E%3C/svg%3E");
+/* Subtle texture background */
+.bg-warm {
+  background-color: #FDFBF8;
 }
 
-/* Fabric paper texture */
-.bg-paper {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
-}
-
-/* Embroidery stitch animation */
-@keyframes stitch-draw {
-  from { stroke-dashoffset: 100; }
-  to { stroke-dashoffset: 0; }
-}
-
-.animate-stitch {
-  animation: stitch-draw 2s ease-out forwards;
-}
-
-/* Stitched border effect */
-.border-stitched {
-  border: 2px dashed rgba(212, 145, 154, 0.5);
-  border-radius: 12px;
-  padding: 2px;
+.bg-sand {
+  background-color: #F8F5F0;
 }
 
 /* Soft scroll behavior */
 html {
   scroll-behavior: smooth;
 }
+

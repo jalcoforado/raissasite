@@ -1,80 +1,88 @@
 /**
- * Hero Section — Main banner with castle illustration
- * Design: Cream linen bg with gingham, handcrafted feel, embroidered badge
+ * Hero Section — Clean, professional, welcoming
+ * Design: Modern layout with warm tones, no excessive decoration
  */
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 pb-16 min-h-[90vh] flex items-center overflow-hidden bg-[#FBF7F0]">
-      {/* Layered textile backgrounds */}
-      <div className="absolute inset-0 bg-gingham opacity-35" />
-      <div className="absolute inset-0 bg-linen" />
-
+    <section className="pt-28 pb-20 bg-warm relative overflow-hidden">
+      {/* Subtle gradient accent */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-50/50 to-transparent pointer-events-none" />
+      
       <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text Content */}
-          <div className="space-y-6 text-center lg:text-left">
-            {/* Embroidered badge */}
-            <div className="inline-flex items-center gap-2 bg-white/90 rounded-full px-5 py-2.5 border-2 border-dashed border-[#D4919A]/30 shadow-sm">
-              <Heart size={14} className="text-[#D4919A] fill-[#D4919A]" />
-              <span className="text-xs font-medium text-[#6B5E5E] tracking-wide">
+          {/* Left: Text */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-stone-100">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full" />
+              <span className="text-sm text-stone-600 font-medium">
                 Terapia Cognitivo Comportamental
               </span>
             </div>
 
-            <h1 className="font-script text-5xl md:text-6xl lg:text-7xl text-[#D4919A] leading-tight">
-              Raíssa Alcoforado
+            <h1 className="font-serif-display text-4xl md:text-5xl lg:text-[3.5rem] text-stone-800 leading-[1.15]">
+              Cuidado especializado para crianças e adolescentes
             </h1>
 
-            <p className="font-serif-display text-xl md:text-2xl text-[#6B5E5E] leading-relaxed italic">
-              "Cada criança merece ser ouvida com carinho e ciência"
+            <p className="text-lg text-stone-600 leading-relaxed max-w-lg">
+              Psicóloga infantojuvenil com abordagem baseada em evidências. 
+              Ajudo famílias a fortalecer vínculos e promover o desenvolvimento 
+              emocional saudável.
             </p>
 
-            <p className="text-[#6B5E5E]/80 text-base max-w-md mx-auto lg:mx-0 leading-relaxed">
-              Psicóloga infantojuvenil especializada em acolher famílias, 
-              fortalecer vínculos e promover o desenvolvimento emocional saudável 
-              de crianças e adolescentes.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Button
                 asChild
                 size="lg"
-                className="bg-[#D4919A] hover:bg-[#c07e87] text-white rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-[#D4919A]/60"
+                className="bg-stone-800 hover:bg-stone-900 text-white rounded-lg px-7 py-6 text-base shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
-                <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20meu%20filho." target="_blank" rel="noopener noreferrer">
-                  Vamos conversar sobre o seu filho?
+                <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+                  Agendar consulta
+                  <ArrowRight size={18} className="ml-2" />
                 </a>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-2 border-dashed border-[#8EB4D7]/50 text-[#8EB4D7] hover:bg-[#8EB4D7]/10 rounded-full px-8 py-6 text-base transition-all duration-200"
+                className="border-stone-200 text-stone-700 hover:bg-stone-50 rounded-lg px-7 py-6 text-base transition-all duration-200"
               >
-                <a href="#servicos">Conheça os Serviços</a>
+                <a href="#servicos">
+                  Conheça os serviços
+                </a>
               </Button>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex items-center gap-6 pt-4 text-sm text-stone-500">
+              <span className="font-semibold text-stone-700">CRP 11/19565</span>
+              <div className="w-px h-4 bg-stone-200" />
+              <span>Presencial e online</span>
             </div>
           </div>
 
-          {/* Right: Hero Illustration in embroidery-hoop style frame */}
+          {/* Right: Image */}
           <div className="relative">
-            <div className="relative mx-auto max-w-lg">
-              {/* Decorative soft glows */}
-              <div className="absolute -top-8 -right-8 w-64 h-64 bg-[#8EB4D7]/8 rounded-full blur-3xl" />
-              <div className="absolute -bottom-8 -left-8 w-56 h-56 bg-[#D4919A]/8 rounded-full blur-3xl" />
-              
-              {/* Stitched frame around image */}
-              <div className="absolute -inset-4 border-2 border-dashed border-[#C9A96E]/30 rounded-3xl" />
-              <div className="absolute -inset-2 border border-[#D4919A]/15 rounded-2xl" />
-              
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-stone-200/50">
               <img
-                src="/manus-storage/hero-banner_c2faccb0.png"
-                alt="Ilustração de castelo encantado com flores"
-                className="relative z-10 w-full rounded-2xl shadow-xl"
+                src="/manus-storage/hero-banner_c3d8f0d4.png"
+                alt="Consultório de psicologia infantojuvenil"
+                className="w-full aspect-[4/3] object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent" />
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 border border-stone-100">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-emerald-50 rounded-lg flex items-center justify-center">
+                  <span className="text-emerald-600 text-lg">✓</span>
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-stone-800">Especialista em TCC</p>
+                  <p className="text-xs text-stone-500">Infantojuvenil</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

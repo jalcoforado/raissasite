@@ -1,6 +1,5 @@
 /**
- * Approach Section — TCC methodology with handcrafted step cards
- * Design: White bg with linen texture, numbered steps as fabric patches
+ * Approach Section — TCC methodology explained clearly
  */
 import { CheckCircle2 } from "lucide-react";
 
@@ -8,100 +7,73 @@ const steps = [
   {
     number: "01",
     title: "Acolhimento",
-    description:
-      "Primeiro encontro para conhecer a criança e a família, entender a demanda e criar um vínculo de confiança.",
-    color: "#D4919A",
+    description: "Primeiro encontro para conhecer a criança/adolescente e sua família, criando um vínculo de confiança.",
   },
   {
     number: "02",
     title: "Avaliação",
-    description:
-      "Identificação dos padrões de pensamento e comportamento através de atividades lúdicas e observação clínica.",
-    color: "#8EB4D7",
+    description: "Identificação de padrões de pensamento e comportamento através de atividades adaptadas à idade.",
   },
   {
     number: "03",
     title: "Intervenção",
-    description:
-      "Aplicação de técnicas da TCC adaptadas à idade, ensinando a criança a reconhecer e gerenciar suas emoções.",
-    color: "#A8C9A5",
+    description: "Aplicação de técnicas da TCC de forma lúdica para crianças e dialogada para adolescentes.",
   },
   {
     number: "04",
     title: "Evolução",
-    description:
-      "Acompanhamento contínuo do progresso, com devolutivas aos pais e ajustes no plano terapêutico.",
-    color: "#D4919A",
+    description: "Acompanhamento contínuo com devolutivas regulares aos pais e ajustes no plano terapêutico.",
   },
+];
+
+const benefits = [
+  "Abordagem cientificamente comprovada",
+  "Adaptada ao universo infantojuvenil",
+  "Resultados observáveis em curto prazo",
+  "Família envolvida ativamente no processo",
+  "Técnicas práticas para o dia a dia",
 ];
 
 export default function ApproachSection() {
   return (
-    <section id="abordagem" className="py-20 bg-white relative">
-      <div className="absolute inset-0 bg-linen" />
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Content */}
+    <section id="abordagem" className="py-20 bg-white">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-6">
-            <div className="inline-block px-5 py-1.5 bg-[#FBF7F0] border-2 border-dashed border-[#A8C9A5]/40 rounded-full">
-              <span className="text-xs font-medium text-[#A8C9A5] uppercase tracking-[0.15em]">
-                Abordagem
-              </span>
-            </div>
-            <h2 className="font-serif-display text-3xl md:text-4xl text-[#6B5E5E] leading-tight">
-              Terapia Cognitivo Comportamental para crianças
+            <span className="text-sm font-medium text-stone-500 uppercase tracking-wider">
+              Abordagem
+            </span>
+            <h2 className="font-serif-display text-3xl md:text-4xl text-stone-800 leading-tight">
+              Terapia Cognitivo Comportamental
             </h2>
-            <p className="text-[#6B5E5E]/80 leading-relaxed">
+            <p className="text-stone-600 leading-relaxed">
               A TCC é uma abordagem cientificamente comprovada que ajuda crianças 
-              a entenderem a relação entre pensamentos, emoções e comportamentos. 
-              De forma lúdica e adaptada à idade, trabalhamos juntos para 
-              desenvolver habilidades que promovem bem-estar e autonomia.
+              e adolescentes a entenderem a relação entre pensamentos, emoções e 
+              comportamentos. É adaptada de forma lúdica para os pequenos e 
+              dialogada para os adolescentes, com resultados práticos e mensuráveis.
             </p>
-
-            {/* Benefits list with embroidery dots */}
             <div className="space-y-3 pt-2">
-              {[
-                "Baseada em evidências científicas",
-                "Adaptada ao universo infantil",
-                "Resultados observáveis em curto prazo",
-                "Envolvimento ativo da família",
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full border-2 border-dashed border-[#A8C9A5]/50 flex items-center justify-center flex-shrink-0">
-                    <div className="w-2 h-2 rounded-full bg-[#A8C9A5]" />
-                  </div>
-                  <span className="text-sm text-[#6B5E5E]/80">{benefit}</span>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <CheckCircle2 size={18} className="text-emerald-500 flex-shrink-0" />
+                  <span className="text-stone-700 text-sm">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right: Steps as fabric patches */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="flex gap-5 p-5 bg-[#FBF7F0] rounded-xl relative transition-all duration-300 hover:shadow-md"
-                style={{
-                  border: `2px dashed ${step.color}35`,
-                }}
+                className="flex gap-4 p-5 bg-stone-50 rounded-xl border border-stone-100 hover:bg-stone-100/50 transition-colors"
               >
-                {/* Number badge */}
-                <div className="flex-shrink-0">
-                  <div
-                    className="w-10 h-10 rounded-full flex items-center justify-center border-2 border-dashed"
-                    style={{ borderColor: `${step.color}50`, backgroundColor: `${step.color}10` }}
-                  >
-                    <span className="font-serif-display text-sm font-bold" style={{ color: step.color }}>
-                      {step.number}
-                    </span>
-                  </div>
-                </div>
+                <span className="text-2xl font-bold text-stone-300 font-serif-display flex-shrink-0">
+                  {step.number}
+                </span>
                 <div>
-                  <h3 className="font-semibold text-[#6B5E5E] mb-1">{step.title}</h3>
-                  <p className="text-sm text-[#6B5E5E]/70 leading-relaxed">
-                    {step.description}
-                  </p>
+                  <h3 className="font-semibold text-stone-800 mb-1">{step.title}</h3>
+                  <p className="text-sm text-stone-600 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

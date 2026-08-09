@@ -37,7 +37,7 @@ export default function ContactSection() {
                 <MessageCircle size={20} className="text-[#A8C9A5]" />
               </div>
               <h3 className="font-semibold text-[#6B5E5E] text-sm mb-1">WhatsApp</h3>
-              <p className="text-xs text-[#6B5E5E]/60">Agendamento e dúvidas</p>
+              <p className="text-xs text-[#6B5E5E]/60">(85) 98117-3003</p>
             </div>
             <div className="text-center p-6 bg-[#FBF7F0] rounded-xl border-2 border-dashed border-[#D4919A]/30 relative">
               <div className="absolute top-2 left-2 w-1.5 h-1.5 rounded-full bg-[#D4919A]/40" />
@@ -46,7 +46,7 @@ export default function ContactSection() {
                 <Clock size={20} className="text-[#D4919A]" />
               </div>
               <h3 className="font-semibold text-[#6B5E5E] text-sm mb-1">Horários</h3>
-              <p className="text-xs text-[#6B5E5E]/60">Seg a Sex, 8h às 18h</p>
+              <p className="text-xs text-[#6B5E5E]/60">Seg a Sex, 8h às 21h</p>
             </div>
             <div className="text-center p-6 bg-[#FBF7F0] rounded-xl border-2 border-dashed border-[#8EB4D7]/30 relative">
               <div className="absolute top-2 left-2 w-1.5 h-1.5 rounded-full bg-[#8EB4D7]/40" />
@@ -55,7 +55,7 @@ export default function ContactSection() {
                 <Instagram size={20} className="text-[#8EB4D7]" />
               </div>
               <h3 className="font-semibold text-[#6B5E5E] text-sm mb-1">Instagram</h3>
-              <p className="text-xs text-[#6B5E5E]/60">@raissaalcoforado.psi</p>
+              <p className="text-xs text-[#6B5E5E]/60">@raissalcoforado</p>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export default function ContactSection() {
               size="lg"
               className="bg-[#D4919A] hover:bg-[#c07e87] text-white rounded-full px-10 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-[#D4919A]/60"
             >
-              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={20} className="mr-2" />
                 Conversar pelo WhatsApp
               </a>

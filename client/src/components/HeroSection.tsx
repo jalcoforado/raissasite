@@ -44,7 +44,7 @@ export default function HeroSection() {
                 size="lg"
                 className="bg-[#D4919A] hover:bg-[#c07e87] text-white rounded-full px-8 py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-[#D4919A]/60"
               >
-                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20meu%20filho." target="_blank" rel="noopener noreferrer">
                   Vamos conversar sobre o seu filho?
                 </a>
               </Button>

@@ -70,7 +70,7 @@ export default function Header() {
             asChild
             className="ml-4 bg-[#D4919A] hover:bg-[#c07e87] text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] border border-[#D4919A]/50"
           >
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
               Agendar Consulta
             </a>
           </Button>
@@ -103,7 +103,7 @@ export default function Header() {
             asChild
             className="w-full bg-[#D4919A] hover:bg-[#c07e87] text-white rounded-full mt-3"
           >
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
               Agendar Consulta
             </a>
           </Button>

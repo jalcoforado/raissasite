@@ -12,6 +12,7 @@ import FamilySection from "@/components/FamilySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloralDivider from "@/components/FloralDivider";
+import WhatsAppChat from "@/components/WhatsAppChat";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 }
-

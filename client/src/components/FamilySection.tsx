@@ -51,7 +51,7 @@ export default function FamilySection() {
               size="lg"
               className="bg-[#8EB4D7] hover:bg-[#7aa3c6] text-white rounded-full px-8 py-6 text-base shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] border border-[#8EB4D7]/60 mt-4"
             >
-              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5585981173003?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20orienta%C3%A7%C3%A3o%20parental." target="_blank" rel="noopener noreferrer">
                 Saiba mais sobre orientação parental
               </a>
             </Button>
@@ -71,4 +71,3 @@ export default function FamilySection() {
     </section>
   );
 }
-

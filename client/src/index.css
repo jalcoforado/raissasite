@@ -151,45 +151,45 @@
 .bg-gingham {
   background-color: #fefefe;
   background-image:
-    /* Soft blue vertical band */
+    /* Blue vertical bands */
     repeating-linear-gradient(
       90deg,
       transparent 0px,
       transparent 70px,
-      #edf3f9 70px,
-      #edf3f9 140px,
+      #d6e8f5 70px,
+      #d6e8f5 140px,
       transparent 140px,
       transparent 210px,
-      #f8f1ed 210px,
-      #f8f1ed 280px,
+      #f5e4d9 210px,
+      #f5e4d9 280px,
       transparent 280px,
       transparent 350px,
-      #fdf4f5 350px,
-      #fdf4f5 420px,
+      #f9dfe2 350px,
+      #f9dfe2 420px,
       transparent 420px,
       transparent 490px,
-      #e7eef6 490px,
-      #e7eef6 560px
+      #cde2f2 490px,
+      #cde2f2 560px
     ),
-    /* Soft blue horizontal band */
+    /* Horizontal bands */
     repeating-linear-gradient(
       0deg,
       transparent 0px,
       transparent 70px,
-      #edf3fa 70px,
-      #edf3fa 140px,
+      #d6e8f5 70px,
+      #d6e8f5 140px,
       transparent 140px,
       transparent 210px,
-      #fcf7ec 210px,
-      #fcf7ec 280px,
+      #f5e4d9 210px,
+      #f5e4d9 280px,
       transparent 280px,
       transparent 350px,
-      #fdf4f5 350px,
-      #fdf4f5 420px,
+      #f9dfe2 350px,
+      #f9dfe2 420px,
       transparent 420px,
       transparent 490px,
-      #e7eef6 490px,
-      #e7eef6 560px
+      #cde2f2 490px,
+      #cde2f2 560px
     );
   background-size: 560px 560px;
 }
@@ -202,31 +202,31 @@
       90deg,
       transparent 0px,
       transparent 60px,
-      #f0f5fa 60px,
-      #f0f5fa 120px,
+      #ddeaf4 60px,
+      #ddeaf4 120px,
       transparent 120px,
       transparent 180px,
-      #fcf8ee 180px,
-      #fcf8ee 240px,
+      #f7e8de 180px,
+      #f7e8de 240px,
       transparent 240px,
       transparent 300px,
-      #fdf5f6 300px,
-      #fdf5f6 360px
+      #fae3e5 300px,
+      #fae3e5 360px
     ),
     repeating-linear-gradient(
       0deg,
       transparent 0px,
       transparent 60px,
-      #f0f5fa 60px,
-      #f0f5fa 120px,
+      #ddeaf4 60px,
+      #ddeaf4 120px,
       transparent 120px,
       transparent 180px,
-      #fcf8ee 180px,
-      #fcf8ee 240px,
+      #f7e8de 180px,
+      #f7e8de 240px,
       transparent 240px,
       transparent 300px,
-      #fdf5f6 300px,
-      #fdf5f6 360px
+      #fae3e5 300px,
+      #fae3e5 360px
     );
   background-size: 360px 360px;
 }
